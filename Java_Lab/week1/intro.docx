@@ -1,0 +1,67 @@
+Question 1- What is java?
+Java is a general purpose, high-level programming language developed by Sun Microsystems. The Java programming language was developed by a small team of engineers, known as the Green Team, who initiated the language in 1991. The language was originally called OAK, and at the time it was designed for handheld devices and set-top boxes. Oak was unsuccessful and in 1995 Sun changed the name to Java and modified the language to take advantage of the burgeoning World Wide Web.
+
+Question 2- Why is java better than c++?
+Marketing. Java had the backing of a large company, unlike C++(design by committee) and Python(Benevolent Dictatorship). Object Oriented Programming was marketed as a cure-all silver bullet. Even very well designed languages need lot of marketing and convincing to gain popularity.
+Learning curve. The syntax was deliberately made similar to C/C++ so that it was easier for programmers to transition from its parent languages. 
+Garbage collection. This was viewed as a welcome relief to programmers caught in a world of dangling pointers and surprise core dumps. Java nailed this problem.
+Hiring factor. Java was designed as a tool for large teams of constantly changing developers where transition costs had to be minimized . Imposing programmer discipline at the language level seemed a good idea, and still is.
+Portability. "Write once, run anywhere" propaganda marketed by Sun. Related to first point. Java had a head start when it came to cross compatibility among platforms, and was the first language to do so. in fact, Java was born out of a multiple device product[2].
+Standard Library. A well written standard library came as an afterthought in C++. This was well thought out in Java.
+
+Question 3- What are the features of java?
+There is given many features of java. They are also known as java buzzwords. The Java Features given below are simple and easy to understand.
+1. Simple
+Java language is simple because:
+      syntax is based on C++ (so easier for programmers to learn it after C++).
+      removed many confusing and/or rarely-used features e.g., explicit pointers, operator overloading etc.
+      No need to remove unreferenced objects because there is Automatic Garbage Collection in java.
+2. Object-Oriented
+Object-oriented means we organize our software as a combination of different types of objects that incorporates both data and behaviour.
+Object-oriented programming(OOPs) is a methodology that simplify software development and maintenance by providing some rules.
+Basic concepts of OOPs are:
+1. Object
+2. Class
+3. Inheritance
+4. Polymorphism
+5. Abstraction
+6. Encapsulation
+3. Portable
+4. Platform independent
+A platform is the hardware or software environment in which a program runs.
+There are two types of platforms software-based and hardware-based. Java provides software-based platform.
+The Java platform differs from most other platforms in the sense that it is a software-based platform that runs on the top of other hardware-based platforms. It has two components:
+1. Runtime Environment
+2. API(Application Programming Interface)
+Java code can be run on multiple platforms e.g. Windows, Linux, Sun Solaris, Mac/OS etc. Java code is compiled by the compiler and converted into bytecode. This bytecode is a platform-independent code because it can be run on multiple platforms i.e. Write Once and Run Anywhere(WORA).
+5. Secured
+Java is secured because:
+No explicit pointer
+Java Programs run inside virtual machine sandbox
+
+
+
+
+
+                                  
+
+
+Classloader: adds security by separating the package for the classes of the local file system from those that are imported from network sources.
+Bytecode Verifier: checks the code fragments for illegal code that can violate access right to objects.
+Security Manager: determines what resources a class can access such as reading and writing to the local disk.
+6. Robust
+Robust simply means strong. Java uses strong memory management. There are lack of pointers that avoids security problem. There is automatic garbage collection in java. There is exception handling and type checking mechanism in java. All these points makes java robust.
+7. Architecture neutral
+There is no implementation dependent features e.g. size of primitive types is fixed.
+ In C programming, int data type occupies 2 bytes of memory for 32-bit architecture and 4 bytes of memory for 64-bit architecture. But in java, it occupies 4 bytes of memory for both 32 and 64 bit architectures.
+8. Dynamic
+9. Interpreted
+10. High Performance
+Java is faster than traditional interpretation since byte code is "close" to native code still somewhat slower than a compiled language (e.g., C++)
+
+
+
+
+Question 4- Why is java called a platform independent language?
+With Java, you can compile source code on Windows and the compiled code (bytecode to be precise) can be executed (interpreted) on any platform running a JVM. So yes you need a JVM but the JVM can run any compiled code, the compiled code is platform independent.
+

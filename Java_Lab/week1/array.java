@@ -1,3 +1,8 @@
+/**
+ * Date: 09/08/17
+ * Purpose: Demonstrate the arrays in java
+ */
+
 class array {
     public static void main(String args[]) {
         int arr[], mean = 0;

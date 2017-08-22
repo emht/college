@@ -1,3 +1,8 @@
+/**
+ * Date: 09/08/17
+ * Purpose: Demonstrates arithmetic operators
+ */
+
 class timetake {
     public static void main(String args[]) {
         System.out.println("Time taken to reach LA from NY: " + 3000 / 75 + " hours.");

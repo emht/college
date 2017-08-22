@@ -1,3 +1,8 @@
+/**
+ * Date: 09/08/17
+ * Purpose: Swap two integer using fuction and object reference
+ */
+
 class swapusingfunction {
     public static void swapfunc(int p, int q)
     {

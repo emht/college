@@ -1,3 +1,7 @@
+/**
+ * Date: 16/08/17
+ * Purpose: Demonstrates the class instantiation and usage in java
+ */
 class classperson {
     public static class person {
         int age, salary;

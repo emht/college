@@ -1,3 +1,7 @@
+/**
+ * Date: 16/08/17
+ * Purpose: Checks whether the passed argument is odd or not
+ */
 class arg_odd {
     public static void main(String args[]) {
         if (args.length == 1) {

@@ -1,3 +1,7 @@
+/**
+ * Date: 16/08/17
+ * Purpose: Perform operation on doubles passed via arguments
+ */
 class doublearg {
     public static void main(String args[]) {
         if(args.length == 2) {

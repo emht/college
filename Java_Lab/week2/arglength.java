@@ -1,3 +1,8 @@
+/**
+ * Date: 16/08/17
+ * Purpose: Demonstrates to access the arguments
+ */
+
 class arglength {
     public static void main(String args[]) {
         for(int iter = 0; iter < args.length; iter++) {

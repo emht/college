@@ -1,5 +1,9 @@
-import java.util.Scanner;
+/**
+ * Date: 09/08/17
+ * Purpose: Checks whether the input number is odd or even
+ */
 
+import java.util.Scanner;
 class oddoreven {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);

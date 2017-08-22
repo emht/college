@@ -1,3 +1,8 @@
+/**
+ * Date: 09/08/17
+ * Purpose: Demonstrates the multidimensional array
+ */
+
 class twodarray {
     public static void main(String args[]) {
         int arr[][];

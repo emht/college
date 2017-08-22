@@ -1,3 +1,7 @@
+/**
+ * Date: 16/08/17
+ * Purpose: Calculates the area of circle using passed radius 
+ */
 class circle_area {
     public static void main(String args[]) {
         if (args.length == 1) {

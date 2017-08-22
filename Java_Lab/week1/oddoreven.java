@@ -1,6 +1,12 @@
+import java.util.Scanner;
+
 class oddoreven {
     public static void main(String args[]) {
-        int num1 = 23, num2 = 45;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input first Number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Input second Number: ");
+        int num2 = sc.nextInt();
         if(num1 % 2 == 0) System.out.println(num1 + " is an even number.");
         else System.out.println(num1 + " is an odd number.");
 

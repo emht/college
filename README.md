@@ -1,7 +1,7 @@
-# college
-This repository contains all the programs/software projects for my college labs.
-=======================================================================================
+# College
+
 ### 5th Semester Labs
+##### This repository contains all the programs/software projects for my college labs.
 
 #### Java Programming
 * All the programs in this lab is made solely using java.

@@ -1,32 +1,27 @@
 /**
  * Date: 23/08/17
- * Purpose: Initialise a circle class using constructor
+ * Purpose: Counts the number of instances instantiated of a class
  */
-import java.util.Scanner;
-
 class countInstances {
-    public static class Circle {
-        int center, radius;
-
-        Circle(int cen, int rad) {
-            center = cen;
-            radius = rad;
+    public static class count {
+        static int counter = 0;
+        count() {
+            counter++;
         }        
         public void getOutput() {
-            System.out.println("The Center of the circle is: " + this.center + ".");
-            System.out.println("The Radius of the circle is: " + this.radius + ".");
+            System.out.println("The Count of this class object has reached to: " + counter + ".");
         }
     }
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Input the Center and Radius of the circle.");
-        System.out.print("Center: ");
-        int cen = sc.nextInt();
-        System.out.print("Radius: ");
-        int rad = sc.nextInt();
+        System.out.println("This program will count the number of instances created by a class.");
+        System.out.println("");
 
-        Circle one = new Circle(cen, rad);
+        count one = new count();
         one.getOutput();
+        count two = new count();
+        two.getOutput();
+        count three = new count();
+        three.getOutput();
 
         System.out.println("Made by: Mohit Bansal(05414802715)\n");        
     }

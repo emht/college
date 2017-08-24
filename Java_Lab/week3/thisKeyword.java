@@ -5,29 +5,31 @@
 import java.util.Scanner;
 
 class thisKeyword {
-    public static class Circle {
-        int center, radius;
+    public static class Student {
+        String name;
+        int age;
 
-        Circle(int cen, int rad) {
-            center = cen;
-            radius = rad;
+        Student(String name, int age) {
+            this.name = name;
+            this.age = age;
         }        
         public void getOutput() {
-            System.out.println("The Center of the circle is: " + this.center + ".");
-            System.out.println("The Radius of the circle is: " + this.radius + ".");
+            System.out.println("The name of student is: " + this.name + ".");
+            System.out.println("The age of student is: " + this.age + ".");
         }
     }
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input the Center and Radius of the circle.");
-        System.out.print("Center: ");
-        int cen = sc.nextInt();
-        System.out.print("Radius: ");
-        int rad = sc.nextInt();
+        System.out.println("Input the Name and Age of the student: ");
+        System.out.print("Name: ");
+        String stu_name = sc.nextLine();
+        System.out.print("Age: ");
+        int stu_age = sc.nextInt();
 
-        Circle one = new Circle(cen, rad);
+        Student one = new Student(stu_name, stu_age);
         one.getOutput();
 
-        System.out.println("Made by: Mohit Bansal(05414802715)\n");        
+        System.out.println("Made by: Mohit Bansal(05414802715)\n");  
+        sc.close();      
     }
 }

@@ -1,17 +1,17 @@
 /**
  * Date: 23/08/17
- * Purpose: Inputting/initialising circle class
+ * Purpose: Initialise a circle class using constructor
  */
 import java.util.Scanner;
 
-class circleClass {
+class countInstances {
     public static class Circle {
         int center, radius;
-        public void getInput(int cen, int rad) {
+
+        Circle(int cen, int rad) {
             center = cen;
             radius = rad;
-        }
-
+        }        
         public void getOutput() {
             System.out.println("The Center of the circle is: " + this.center + ".");
             System.out.println("The Radius of the circle is: " + this.radius + ".");
@@ -25,8 +25,7 @@ class circleClass {
         System.out.print("Radius: ");
         int rad = sc.nextInt();
 
-        Circle one = new Circle();
-        one.getInput(cen, rad);
+        Circle one = new Circle(cen, rad);
         one.getOutput();
 
         System.out.println("Made by: Mohit Bansal(05414802715)\n");        

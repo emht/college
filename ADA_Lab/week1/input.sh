@@ -6,6 +6,12 @@
 # It will store the generated inputs in best.txt, average.txt and worst.txt
 # This is the script to genrate the input for Best, Average and Worst Case Scenarious
 
+# Checking if the first argument is being passed or not
+if [ -z "$1" ]; then
+	echo "Please provide correct number of arguments"
+	exit
+fi
+
 # Defining the size of the input you need to generated, default value is 10
 if [ "$#" -ne 2 ]; then
 	SIZE=10
@@ -35,7 +41,7 @@ else
 fi
 
 #Best case Generation
-fucntion best {
+function best {
 	for num in `seq 1 $SIZE`;
 	do
 		echo $num >> best.txt

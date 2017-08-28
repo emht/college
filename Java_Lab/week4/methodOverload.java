@@ -4,31 +4,48 @@
 */
 import java.util.Scanner;
 
-class circleClass {
-   public static class Circle {
-       int center, radius;
-       public void getInput(int cen, int rad) {
-           center = cen;
-           radius = rad;
+class methodOverload {
+   public static class ObjectArea {
+       float area = 0;
+       public void Area(float radius) {
+           System.out.println("The Area of the object is: " + 3.14 * radius * radius + ".");
        }
-
-       public void getOutput() {
-           System.out.println("The Center of the circle is: " + this.center + ".");
-           System.out.println("The Radius of the circle is: " + this.radius + ".");
+       public void Area(int side) {
+           System.out.println("The Area of the object is: " + side * side + ".");
+       }
+       public void Area(int len, int bre) {
+           System.out.println("The Area of the object is: " + len * bre + ".");
        }
    }
    public static void main(String args[]) {
        Scanner sc = new Scanner(System.in);
-       System.out.println("Input the Center and Radius of the circle.");
-       System.out.print("Center: ");
-       int cen = sc.nextInt();
-       System.out.print("Radius: ");
-       int rad = sc.nextInt();
-
-       Circle one = new Circle();
-       one.getInput(cen, rad);
-       one.getOutput();
-
+       System.out.println("Select the object whose area you want to calculate:");
+       System.out.println("1. Circle");
+       System.out.println("2. Rectangle");
+       System.out.println("3. Square");
+       
+       int ch = sc.nextInt();
+       ObjectArea obj = new ObjectArea();
+       switch(ch) {
+           case 1:
+            System.out.print("Input the radius of circle: ");
+            float radius = sc.nextFloat();
+            obj.Area(radius);
+            break;
+           case 2:
+            System.out.print("Input the length of the rectangle: ");
+            int len = sc.nextInt();
+            System.out.print("Input the width of the rectangle: ");
+            int breadth = sc.nextInt();
+            obj.Area(len, breadth);
+            break;
+           case 3:
+            System.out.print("Input the side of the square: ");
+            int side = sc.nextInt();
+            obj.Area(side);
+            break;
+           default:
+       }
        System.out.println("Made by: Mohit Bansal(05414802715)\n");        
    }
 }

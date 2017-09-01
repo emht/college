@@ -1,10 +1,11 @@
 #! /bin/bash
-# set -x
-# set -e
+#  set -x
+ set -e
 
 # Usage: ./input.sh -[best/avg/worst] [size]
 # It will store the generated inputs in best.txt, average.txt and worst.txt
 # This is the script to genrate the input for Best, Average and Worst Case Scenarious
+# echo -n to prevent from going to new line
 
 # Checking if the first argument is being passed or not
 if [ -z "$1" ]; then
@@ -19,34 +20,37 @@ else
 	SIZE=$2
 fi
 
-# Clearing the files to remove redundancy
- > best.txt
- > average.txt
- > worst.txt
+# Clearing the files to remove redundancy in their respective functions
 
 #Best case Generation
 function gen_best() {
+	> best.txt
+	
 	for num in `seq 1 $SIZE`;
 	do
-		echo $num >> best.txt
+		echo -n "$num " >> best.txt
 	done
 }
 
 # Average case Generation
 function gen_avg() {
+	> average.txt
+
 	COUNT=0
 	while [ $COUNT -lt $SIZE ] ; do
 		NUM=$(( ( $RANDOM % 999 ) + 1 ))
-		echo $NUM >> average.txt
+		echo -n "$NUM " >> average.txt
 		let COUNT=COUNT+1
 	done
 }
 
 # Worst case Generation
 function gen_worst() {
+	> worst.txt
+	
 	NUM=$SIZE
 	while [ $NUM -gt 0 ] ; do
-		echo $NUM >> worst.txt
+		echo -n "$NUM " >> worst.txt
 		let NUM=NUM-1
 	done
 

@@ -24,26 +24,42 @@ fi
  > average.txt
  > worst.txt
 
-#Checking for the type of input required
-
-best=false
-avg=false
-worst=false
-
-if [ $1 = "-best" ]; then
-	best=true
-elif [ $1 = "-avg" ]; then
-	avg=true
-elif [ $1 = "-worst" ]; then 
-	worst=true
-else
-	echo "Please provide proper arguments."
-fi
-
 #Best case Generation
-function best {
+function gen_best() {
 	for num in `seq 1 $SIZE`;
 	do
 		echo $num >> best.txt
 	done
 }
+
+# Average case Generation
+function gen_avg() {
+	COUNT=0
+	while [ $COUNT -lt $SIZE ] ; do
+		NUM=$(( ( $RANDOM % 999 ) + 1 ))
+		echo $NUM >> average.txt
+		let COUNT=COUNT+1
+	done
+}
+
+# Worst case Generation
+function gen_worst() {
+	NUM=$SIZE
+	while [ $NUM -gt 0 ] ; do
+		echo $NUM >> worst.txt
+		let NUM=NUM-1
+	done
+
+}
+
+
+#Checking for the type of input required
+case $1 in
+"-best" )
+	gen_best ;;
+"-avg" )
+	gen_avg ;;
+"-worst" )
+	gen_worst ;;
+esac
+

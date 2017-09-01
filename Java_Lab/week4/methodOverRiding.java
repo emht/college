@@ -4,7 +4,7 @@
 */
 import java.util.Scanner;
 
-class personInheritance {
+class methodOverRiding {
    public static class human {
        void out() {
            System.out.println("Parent Class");

@@ -19,7 +19,7 @@ class pattern2 {
         public void draw() {
             int counter = 1;
             for(int i = 0; i <= height; i++) {
-                for(int j = i+1; j <= height; j++) {
+                for(int j = i; j <= height; j++) {
                     System.out.print(" ");
                 }
                 for(int k = 0; k < i; k++) {

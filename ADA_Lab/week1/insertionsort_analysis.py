@@ -18,7 +18,7 @@ def InsertionSort(Arr):
     
     TimeTaken = time.time() - StartTime
     # outputs the time taken in seconds
-    print(float(round(TimeTaken, 5)))
+    print(length, float(round(TimeTaken, 5)))
 
 
 

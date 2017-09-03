@@ -20,7 +20,7 @@ def selectionSort(Arr):
     
     TimeTaken = time.time() - StartTime
     # outputs the time taken in seconds
-    print(float(round(TimeTaken, 5)))
+    print(length, float(round(TimeTaken, 5)))
 
 
 if __name__ == "__main__" :
@@ -28,4 +28,3 @@ if __name__ == "__main__" :
     Arr.remove('')
     Arr = list(map(int, Arr))
     selectionSort(Arr)
-    print ("Sorted array is:")

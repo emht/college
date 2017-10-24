@@ -11,15 +11,15 @@ interface Showable extends Printable {
     void show();
 }
 
-class interfaceinheritance implements showable{
+class interfaceinheritance implements Showable{
    public void print() {
-       System.out.println("Hello");
+       System.out.println("In Print(): Hello");
    }
-   public void print() {
-       System.out.println("Welcome");
+   public void show() {
+       System.out.println("In Show(): Welcome");
     }
    public static void main(String args[]) {
-       TestInterface obj = new TestInterface();  
+       interfaceinheritance obj = new interfaceinheritance();
        obj.print();
        obj.show();
        System.out.println();

@@ -2,22 +2,35 @@
 * Date: 30/08/17
 * Purpose: Demonstrate runtime polymorphism
 */
-import java.util.Scanner;
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.event.*;
+import java.awt.*;
 
-class runtimepolymorphism {
-   public static class human {
-       void out() {
-           System.out.println("Parent Class");
-       }
-   }
-   public static class student extends human{
-       void out() {
-           System.out.println("Child Class");
-       }
-   }
-   public static void main(String args[]) {
-       student first = new student();
-       first.out();      
-       System.out.println("Made by: Mohit Bansal(05414802715)\n");        
-   }
+public class life_of_applet extends Applet{
+	  public void init() {
+			  super.init();
+			   System.out.println("init(): initializing resources for applet ");
+	  }
+	 
+	  public void start() {
+			  super.start();
+			  System.out.println("start(): starting the Applet");
+	  }
+	 
+	  public void stop() {
+			  super.stop();
+			  System.out.println("stop(): Stopping applet");
+	  }
+	 
+	  public void paint(Graphics g) {
+			  super.paint(g);
+			  System.out.println("Mohit Bansal, 05414802715");
+
+	  }
+	  public void destroy() {
+			  super.destroy();
+			  System.out.println("destroy(): Destroy is called,Deallocating all resources");
+	  }
+
 }

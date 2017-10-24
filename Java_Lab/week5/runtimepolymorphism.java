@@ -24,7 +24,7 @@ class runtimepolymorphism {
    public static void main(String args[]) {
        base b1 = new subclass1();
        base b2 = new subclass2();
-       System.out.println("Initiliasing base class object.")
+       System.out.println("Initiliasing base class object.");
        b1.out();
        b2.out();
        System.out.println("Made by: Mohit Bansal(05414802715)\n");        

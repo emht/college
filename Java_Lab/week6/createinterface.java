@@ -18,7 +18,7 @@ class createinterface implements MyInterface {
      System.out.println("implementation of method2");
     }
    public static void main(String args[]) {
-       MyInterface obj = new Demo();
+       MyInterface obj = new createinterface();
 	   obj.method1();
        System.out.println();
        System.out.println("Made by: Mohit Bansal(05414802715)\n");        

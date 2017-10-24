@@ -30,13 +30,13 @@ class B extends Thread {
             catch(Exception e) { }
         }
         System.out.println("Exit from B");
-        Sytem.out.println();
+        System.out.println();
     }
 }
 class threads {
    public static void main(String args[]) {
+        System.out.println("Made by: Mohit Bansal(05414802715)\n");        
        new A().start();
-       new B().start();    
-       System.out.println("Made by: Mohit Bansal(05414802715)\n");        
+       new B().start();          
    }
 }

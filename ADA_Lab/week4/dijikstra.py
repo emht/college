@@ -1,55 +1,75 @@
-# http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/117228
-from priodict import priorityDictionary
-def Dijkstra(G, start, end=None):
-    """
-    Implementation of dijkstra algorithm in python.
-    """
-    D = {}  # dictionary of final distances
-    P = {}  # dictionary of predecessors
-    Q = priorityDictionary()  # estimated distances of non-final vertices
-    Q[start] = 0
-
-    for v in Q:
-        D[v] = Q[v]
-        if v == end:
-            break
-
-        for w in G[v]:
-            vwLength = D[v] + G[v][w]
-            if w in D:
-                if vwLength < D[w]:
-                    raise ValueError("Dijkstra: found better path to already-final vertex")
-            elif w not in Q or vwLength < Q[w]:
-                Q[w] = vwLength
-                P[w] = v
-    return (D, P)
-
-
-def shortestPath(G, start, end):
-    """
-    Find a single shortest path from the given start vertex to the given
-    end vertex. The input has the same conventions as Dijkstra(). The
-    output is a list of the vertices in order along the shortest path.
-    """
-
-    D, P = Dijkstra(G, start, end)
-    Path = []
-    while 1:
-        Path.append(end)
-        if end == start:
-            break
-        end = P[end]
-    Path.reverse()
-    return Path
-
-if __name__ == "__main__":
-    G = {'s': {'u':10, 'x':5},
-    'u': {'v':1, 'x':2},
-    'v': {'y':4},
-    'x':{'u':3,'v':9,'y':2},
-    'y':{'s':7,'v':6}}
-    print(Dijkstra(G,'s'))
-    print(shortestPath(G,'s','v'))
-# example, CLR p.528
-
-
+import sys
+ 
+class Graph():
+ 
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = [[0 for column in range(vertices)] 
+                      for row in range(vertices)]
+ 
+    def printSolution(self, dist):
+        print "Vertex tDistance from Source"
+        for node in range(self.V):
+            print node,"t",dist[node]
+ 
+    # A utility function to find the vertex with 
+    # minimum distance value, from the set of vertices 
+    # not yet included in shortest path tree
+    def minDistance(self, dist, sptSet):
+ 
+        # Initilaize minimum distance for next node
+        min = sys.maxint
+ 
+        # Search not nearest vertex not in the 
+        # shortest path tree
+        for v in range(self.V):
+            if dist[v] < min and sptSet[v] == False:
+                min = dist[v]
+                min_index = v
+ 
+        return min_index
+ 
+    # Funtion that implements Dijkstra's single source 
+    # shortest path algorithm for a graph represented 
+    # using adjacency matrix representation
+    def dijkstra(self, src):
+ 
+        dist = [sys.maxint] * self.V
+        dist[src] = 0
+        sptSet = [False] * self.V
+ 
+        for cout in range(self.V):
+ 
+            # Pick the minimum distance vertex from 
+            # the set of vertices not yet processed. 
+            # u is always equal to src in first iteration
+            u = self.minDistance(dist, sptSet)
+ 
+            # Put the minimum distance vertex in the 
+            # shotest path tree
+            sptSet[u] = True
+ 
+            # Update dist value of the adjacent vertices 
+            # of the picked vertex only if the current 
+            # distance is greater than new distance and
+            # the vertex in not in the shotest path tree
+            for v in range(self.V):
+                if self.graph[u][v] > 0 and sptSet[v] == False and dist[v] > dist[u] + self.graph[u][v]:
+                        dist[v] = dist[u] + self.graph[u][v]
+ 
+        self.printSolution(dist)
+ 
+# Driver program
+g  = Graph(9)
+g.graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
+           [4, 0, 8, 0, 0, 0, 0, 11, 0],
+           [0, 8, 0, 7, 0, 4, 0, 0, 2],
+           [0, 0, 7, 0, 9, 14, 0, 0, 0],
+           [0, 0, 0, 9, 0, 10, 0, 0, 0],
+           [0, 0, 4, 14, 10, 0, 2, 0, 0],
+           [0, 0, 0, 0, 0, 2, 0, 1, 6],
+           [8, 11, 0, 0, 0, 0, 1, 0, 7],
+           [0, 0, 2, 0, 0, 0, 6, 7, 0]
+          ];
+ 
+g.dijkstra(0);

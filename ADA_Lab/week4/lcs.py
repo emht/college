@@ -1,9 +1,11 @@
-'''
-Takes the input from the user, X and Y
-which outputs the longest common subsequences.
-'''
+# imports for calculating the time take to execute the script
+import time
+
 def lcs(X , Y):
-    
+    '''
+    Takes the input from the user, X and Y
+    which outputs the longest common subsequences.
+    '''    
     m = len(X)
     n = len(Y)
  
@@ -25,6 +27,10 @@ def lcs(X , Y):
     return L[m][n]
 
 if __name__ == "__main__":
-    X = input("Enter X: ")
-    Y = input("Enter Y: ")
+    X = "ABCGLPD"
+    Y = "ADCE"
+    StartTime = time.time();
     print("Length of lcs for X and Y is ", lcs(X, Y))
+    TimeTaken = time.time() - StartTime
+    print("Time Taken: " + str(float(round(TimeTaken, 5))))
+

@@ -1,41 +1,47 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en-US">
 	<head>
 		<title>Mohit Bansal</title>
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<script type="text/javascript" src="assets/script.js"></script>
 	</head>
 
 	<body>
-		<header>
-			<center><h2>This is my website!</h2></center>
+		<header class="header">
+			<center><h2>Welcome to my Website!</h2></center>
 			<table style="width:100%">
 				<tr>
-					<th>Home</th>
-					<th>About Me! </th>
-					<th>Projects</th>
-					<th>Skills</th>
-					<th>Meet Me! </th>
+					<th><a href="index.html">Home</a></th>
+					<th><a href="about.html">About Me!</a></th>
+					<th><a href="project.html">Projects</a></th>
+					<th><a href="skills.html">Skills</a></th>
 				</tr>
 			</table>
 		</header>
 
-		<p>
+		<p class="para">
 			This website is my portfolio website featuring stuff about me and related to my skills.
 			<br />
-			As you can see this website's is in WIP state.
+			As you can see this website's is in WIP state and you can find many different features 
+			at same place. So enjoy your stay :)
 		</p>
 
-		<center><h3>Contact Me!</h3></center>
-		<form>
-			<br /> Your Name:
-			<br /> <input type = "text" name = "firstname">
-			<br /> Email:
-			<br /> <input type = "email" name = "email"> 
-			<br /> Message:
-			<br /> <textarea name = "message" rows = "10" cols = "30">Write your message here!</textarea>
-			<br /> <input type = "submit" value = "submit"> 
-		</form>
+		<contact id="contact">
+			<h3>Get in Touch!</h3>
+			<form>
+				<br /> Your Name:
+				<br /> <input type = "text" name = "firstname">
+				<br /> Email:
+				<br /> <input type = "email" name = "email"> 
+				<br /> Message:
+				<br /> <textarea name = "message" rows = "10" cols = "30">Write your message here!</textarea>
+				<br /> <input type = "submit" value = "submit"> 
+			</form>
+		</contact>
 
-		<footer>
+		<p id="date"> Today is: <button type="button" onclick="document.getElementById('date').innerHTML = Date();">Click to know what date today is!</button> </p>
+
+		<footer class="footer">
 			<a href = "#header">Move to Top</a>
 			<center>&copy2018 Portfolio Website Designed By Mohit Bansal</center>
 		</footer>

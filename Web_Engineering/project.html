@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>Mohit Bansal</title>
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script type="text/javascript" src="assets/script.js"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<center><h2>Projects Showcase!</h2></center>
+			<table style="width:100%">
+                <tr>
+                    <th><a href="index.html">Home</a></th>
+                    <th><a href="about.html">About Me!</a></th>
+                    <th><a href="project.html">Projects</a></th>
+                    <th><a href="skills.html">Skills</a></th>
+                </tr>    
+			</table>
+		</header>
+
+		<p class="para">
+			Following are the projects made by me.
+        </p>
+        
+        <ol>
+            <li>
+                <h4>Display the date!</h4>
+                <p id="date"><button type="button" onclick="document.getElementById('date').innerHTML = 'Today is: ' + Date();">Click to know what date today is!</button> </p>
+            </li>
+            <li>
+                <h4>Simple Interest Calculator!</h4>
+                <form>
+                    Pricipal Amount: <input type = "text" id = "principal" name = "principal">
+                    <br /> Rate of Interest per annum: <input type = "text" id="rate" name = "rate"> 
+                    <br /> Time Period in months: <input type = "text" id="months" name = "months"> 
+                </form>
+                <input type="button" value="Calculate!" onclick="cal_interest()" />
+        
+                <p id="simple_interest"></p>        
+            </li>
+        </ol>       
+
+		<footer class="footer">
+			<a href = "#header">Move to Top</a>
+			<center>&copy2018 Portfolio Website Designed By Mohit Bansal</center>
+		</footer>
+
+	</body>
+</html>

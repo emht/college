@@ -28,18 +28,16 @@
 
 		<contact id="contact">
 			<h3>Get in Touch!</h3>
-			<form>
+			<form name="contact_form" onsubmit="return validate_form()" method="post">
 				<br /> Your Name:
-				<br /> <input type = "text" name = "firstname">
+				<br /> <input type="text" name="firstname">
 				<br /> Email:
-				<br /> <input type = "email" name = "email"> 
+				<br /> <input type="email" name="email"> 
 				<br /> Message:
-				<br /> <textarea name = "message" rows = "10" cols = "30">Write your message here!</textarea>
-				<br /> <input type = "submit" value = "submit"> 
+				<br /> <textarea name="message" rows="10" cols="30">Write your message here!</textarea>
+				<br /> <input type="submit" value="submit" onsubmit="validate_form();"> 
 			</form>
 		</contact>
-
-		<p id="date"> Today is: <button type="button" onclick="document.getElementById('date').innerHTML = Date();">Click to know what date today is!</button> </p>
 
 		<footer class="footer">
 			<a href = "#header">Move to Top</a>
